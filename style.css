@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav, article, aside, footer {
+    border: 1px solid green;
+    padding: 10px;
+}
+body{
+    background-color: black;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    color: green;
+}
+main{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 100px 3fr 1fr;
+    grid-template-areas: 
+    "h h h"
+    "n n n"
+    "b a j"
+    "f f f"
+    ;
+}
+
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: a;
+}
+aside#bal{
+    grid-area: b;
+}
+aside#jobb{
+    grid-area: j;
+}
+footer{
+    grid-area: f;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      color: #ca2222;
+      font-size: 5vw;
+      width: 100%;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "b" 
+        "j"
+        "f"
+        ;
+    }
