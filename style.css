@@ -5,28 +5,40 @@
 }
 
 header, nav, article, aside, footer {
-    border: 1px solid green;
+    border: 1px solid white;
+    
     padding: 10px;
 }
 body{
-    background-color: black;
+    padding-right: 75%;
+    margin-right: auto;
+    background-image: url('kepek/bg.jpg');
     width: 90%;
     max-width: 800px;
     margin: auto;
-    color: green;
+    color: whitesmoke;
 }
 main{
-    background-color: black;
     display: grid;
     grid-template-columns: 100px 3fr 1fr;
     grid-template-areas: 
     "h h h"
     "n n n"
     "b a j"
+    "i i i"
     "f f f"
     ;
 }
-
+ul{
+    
+    list-style: none;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
 header{
     grid-area: h;
 }
@@ -45,10 +57,37 @@ aside#jobb{
 footer{
     grid-area: f;
 }
+.kontener{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 1px;
+}
+.kep1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.kep2 {
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+
+}
+
+.kep3 {
+    grid-column-start: 5;
+    grid-row-start: 4;
+    grid-column-end: 5;
+    grid-row-end: 7;
+}
 
 @media screen and (max-width: 600px) {
     body {
-      color: #ca2222;
       font-size: 5vw;
       width: 100%;
     }
